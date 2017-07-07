@@ -17,6 +17,8 @@ c. Wrangling
 ### Initial Ingestion: [https://github.com/dhruvkanakia/ADS_Summer/blob/master/ADS_Assignment1/Initial_Ingestion/Intitial_Ingestion.ipynb](url)
 1. Downloading 46 years of data from the website(https://www.ncdc.noaa.gov/cdo-web/datatools/lcd) and storing it on s3 as well as local system. 
 Below is the code we have used to concatenate the 46 years data into a csv file
+
+
 command docker pull dhruvkanakia/adv_data_science:1st
         docker run  dhruvkanakia/adv_data_science:1st
         
