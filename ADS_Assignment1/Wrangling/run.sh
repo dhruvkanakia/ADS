@@ -1,1 +1,4 @@
-DataWrangling.py
+#! /bin/sh
+python DataWrangling.py
+
+

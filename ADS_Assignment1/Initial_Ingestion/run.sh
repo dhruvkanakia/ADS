@@ -1,1 +1,2 @@
-Intitial_Ingestion.py
+#! /bin/sh
+python Intitial_Ingestion.py

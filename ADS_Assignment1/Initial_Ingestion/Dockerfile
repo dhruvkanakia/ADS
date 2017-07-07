@@ -2,6 +2,7 @@ FROM python
 
 COPY Intitial_Ingestion.py /
 COPY intial_config.json  /
+COPY run.sh /
 
 RUN pip install requests
 
@@ -18,5 +19,6 @@ RUN pip install boto3
 RUN pip install botocore
 
 
-
-CMD ["python","Intitial_Ingestion.py"]
+ADD run.sh /
+RUN chmod +x /run.sh
+ENTRYPOINT ["python","./Intitial_Ingestion.py"]

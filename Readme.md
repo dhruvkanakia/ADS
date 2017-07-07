@@ -1,5 +1,8 @@
 
 
+```python
+
+
 # Assignment 1
 
 
@@ -27,8 +30,7 @@ c=pd.read_csv(io.StringIO(s.decode('utf-8')))
 df_list.append(c)
 full_df=pd.concat(df_list)
 
-docker command to run first image: docker pull dhruvkanakia/adv_data_science:in
-                                   docker run  dhruvkanakia/adv_data_science:in
+
 
 
 2.Below is the code used to add the created csv file into amazon s3
@@ -53,13 +55,15 @@ for files in uploadFileNames:
 ## 2nd Ingestion
 [https://github.com/dhruvkanakia/ADS_Summer/blob/master/ADS_Assignment1/2nd_Ingestion/2nd_Ingestion.ipynb](url)
 
-Docker command to run second image : docker pull dhruvkanakia/adv_data_science:2nd
-                                     docker run  dhruvkanakia/adv_data_science:2nd
-
 1. In this file we concatenate the new data that is getting downloaded from the link(in the json) with the previously mentioned csv file.
 
 Below is the code used to concatenate the new files with the old ones.
 
+COmmamnd for docker pull : docker pull dhruvkanakia/adv_data_science:2nd_final
+                            docker run dhruvkanakia/adv_data_science:2nd_final
+    
+    
+    
 `b= list(bucket.objects.all())
 l=[(k, k.last_modified) for k in b]
 l1= [k for k, v in sorted(l, key= lambda p: p[1], reverse=True)]
@@ -101,10 +105,6 @@ The data was not that clean to perform good analysis. SO to clean the data from 
       
 ### DATA WRANGLING:
 [https://github.com/dhruvkanakia/ADS_Summer/blob/master/ADS_Assignment1/Wrangling/DataWrangling.ipynb](url)
-
-Docker command to run second image : docker pull dhruvkanakia/adv_data_science:3rd
-                                     docker run  dhruvkanakia/adv_data_science:3rd
-
 
 The unclean csv which was used for data analysis is now being initialized in this process to do data wrangling on it.
 
@@ -165,3 +165,5 @@ The nelow graph shows that:
 
 
 All the graphs can be seen in the EDA_Wrangling file.
+
+```
