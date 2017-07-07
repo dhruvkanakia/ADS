@@ -1,0 +1,12 @@
+{
+  "username": "8d0c54f5-5642-4e2a-9d12-81cd7347207b-bluemix",
+  
+"password": "a330cf0c9d39ae21e1b4e5fbb9fb604aea183641623c990a98e893453bd02153",
+  
+"host": "8d0c54f5-5642-4e2a-9d12-81cd7347207b-bluemix.cloudant.com",
+  
+"port": 443,
+ 
+"url": "https://8d0c54f5-5642-4e2a-9d12-81cd7347207b-bluemix:a330cf0c9d39ae21e1b4e5fbb9fb604aea183641623c990a98e893453bd02153@8d0c54f5-5642-4e2a-9d12-81cd7347207b-bluemix.cloudant.com"
+
+}
