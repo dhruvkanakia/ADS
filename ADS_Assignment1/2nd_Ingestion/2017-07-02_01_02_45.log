@@ -1,0 +1,5 @@
+2017-07-02 01:02:45,939 - __main__ - INFO - hello 
+2017-07-02 01:03:26,805 - __main__ - INFO - Checking in AWS if its present and uploading the new file
+2017-07-02 01:03:33,992 - __main__ - INFO - Checking in AWS if its present and uploading the new file
+2017-07-02 01:07:01,643 - __main__ - INFO - Checking in AWS if its present and uploading the new file
+2017-07-02 01:08:04,350 - __main__ - INFO - Checking if the new file exists in the s3 and uploading it

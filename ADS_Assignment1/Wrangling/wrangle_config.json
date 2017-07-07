@@ -1,0 +1,9 @@
+{
+  "state": "CA",
+  "team": 5,
+  "Station Id": 23155,
+  "link": "https://www.ncei.noaa.gov/orders/cdo/1000517.csv",
+  "AWSAccess":"AKIAIAYFK6UA4MV2FDAA",
+  "AWSSecret":"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",
+  "notificationEmail":"test@test.com"
+}
