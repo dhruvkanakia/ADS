@@ -18,6 +18,10 @@ c. Wrangling
 1. Downloading 46 years of data from the website(https://www.ncdc.noaa.gov/cdo-web/datatools/lcd) and storing it on s3 as well as local system. 
 Below is the code we have used to concatenate the 46 years data into a csv file
 
+
+command docker pull dhruvkanakia/adv_data_science:1st
+        docker run  dhruvkanakia/adv_data_science:1st
+        
 import io
 df_list= []
 for x in links:
@@ -53,9 +57,15 @@ for files in uploadFileNames:
 ## 2nd Ingestion
 [https://github.com/dhruvkanakia/ADS_Summer/blob/master/ADS_Assignment1/2nd_Ingestion/2nd_Ingestion.ipynb](url)
 
+<<<<<<< HEAD
 Docker command to run second image : docker pull dhruvkanakia/adv_data_science:2nd
                                      docker run  dhruvkanakia/adv_data_science:2nd
 
+=======
+command docker pull dhruvkanakia/adv_data_science:2nd_final_v1
+        docker run  dhruvkanakia/adv_data_science:2nd_final_v1
+        
+>>>>>>> 40fb1dadf9162cd88b289efbc0924a6c3e4eba7e
 1. In this file we concatenate the new data that is getting downloaded from the link(in the json) with the previously mentioned csv file.
 
 Below is the code used to concatenate the new files with the old ones.
@@ -101,6 +111,8 @@ The data was not that clean to perform good analysis. SO to clean the data from 
       
 ### DATA WRANGLING:
 [https://github.com/dhruvkanakia/ADS_Summer/blob/master/ADS_Assignment1/Wrangling/DataWrangling.ipynb](url)
+command docker pull dhruvkanakia/adv_data_science:3rd_final_v1
+        docker run  dhruvkanakia/adv_data_science:3rd_final_v1
 
 Docker command to run second image : docker pull dhruvkanakia/adv_data_science:3rd
                                      docker run  dhruvkanakia/adv_data_science:3rd
