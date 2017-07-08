@@ -3,7 +3,6 @@
 
 Hi, our name is Dhruv Kanakia and Akil Ranjendiran and we belong to TEAM 5.
 
-In this Assignment we have worked on NOAA dataset (https://www.ncdc.noaa.gov/cdo-web/datatools/lcd). The state in which we have done our analysis is California. 
 
 ## STEPS to follow while running the code:
 1.Ingestion.py runs the code that puts the data onto amazon
