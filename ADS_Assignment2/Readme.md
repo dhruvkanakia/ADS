@@ -1,6 +1,3 @@
-
-
-```python
 # Assignment 1
 
 
@@ -53,4 +50,3 @@ THE following two images shows the UI to input lattitude and longitude while the
 
 
 ![2](https://user-images.githubusercontent.com/29669364/27982448-7bb25c82-636f-11e7-99ee-501fd97415ad.PNG)
-```
