@@ -1,9 +1,10 @@
 FROM python
 
-COPY Intitial_Ingestion.py /
+COPY Ingestion.py /
 COPY intial_config.json  /
 COPY run.sh /
-
+COPY properties_2016.zip /
+COPY train_2016.zip /
 RUN pip install requests
 
 
@@ -21,4 +22,4 @@ RUN pip install botocore
 
 ADD run.sh /
 RUN chmod +x /run.sh
-ENTRYPOINT ["python","./Intitial_Ingestion.py"]
+ENTRYPOINT ["python","./Ingestion.py"]
