@@ -110,76 +110,6 @@ df.head()
 
 
 
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
 # In[21]:
 
 df["HOURLYVISIBILITY"]=df["HOURLYVISIBILITY"].str.replace('s','')
@@ -310,5 +240,37 @@ for files in uploadFileNames:
 
 # In[ ]:
 
+s3Session= boto3.Session (
+    aws_access_key_id= data['AWSAccess'],
+    aws_secret_access_key=data["AWSSecret"],
+    region_name= 'us-west-2'
+)
 
+client=s3Session.client('ses',region_name='us-west-2')
+
+email= 'kanakia.d@husky.neu.edu'
+
+
+# In[ ]:
+
+try:
+    client.send_email(
+        Destination={
+            'ToAddresses':[email]
+        },
+        Message={
+            'Subject':{
+                'Data': "Wrangling job is done"
+            },
+            'Body':{
+                'Text': {
+                    'Data': 'Wrangling Job Done'
+                }
+            }
+        },
+        Source=email
+    )
+    
+except Exception as e:
+    print(e)
 

@@ -13,7 +13,7 @@ import time
 import pandas as pd
 
 
-# In[3]:
+# In[2]:
 
 with open('config.json') as data_file:    
     data = json.load(data_file)
@@ -25,23 +25,23 @@ with open('config.json') as data_file:
 
 
 
-# In[4]:
+# In[3]:
 
 import time
 Date= time.strftime('%Y-%m-%d')
 
 
-# In[5]:
+# In[4]:
 
 Date
 
 
-# In[6]:
+# In[5]:
 
 file=data['state']+'_'+ Date+'_'+ '23155'+'.csv'
 
 
-# In[7]:
+# In[6]:
 
 new_file= os.getcwd()+'//'+file
 new_file
@@ -52,12 +52,7 @@ new_file
 
 
 
-# In[ ]:
-
-
-
-
-# In[8]:
+# In[7]:
 
 import io
 import boto3
@@ -91,7 +86,7 @@ else:
     full_df.to_csv(new_file)
 
 
-# In[9]:
+# In[18]:
 
 import boto3
 s3 = boto3.resource(
@@ -100,7 +95,7 @@ s3 = boto3.resource(
     aws_secret_access_key=data["AWSSecret"])
 
 
-# In[10]:
+# In[19]:
 
 uploadFileNames = []
 
@@ -119,7 +114,7 @@ for filename in glob.glob("*.csv"):
 
 
 
-# In[ ]:
+# In[20]:
 
 import boto3
 import botocore
@@ -148,10 +143,37 @@ for files in uploadFileNames:
 
 # In[ ]:
 
+s3Session= boto3.Session (
+    aws_access_key_id= data['AWSAccess'],
+    aws_secret_access_key=data["AWSSecret"],
+    region_name= 'us-west-2'
+)
 
+client=s3Session.client('ses',region_name='us-west-2')
+
+email= 'kanakia.d@husky.neu.edu'
 
 
 # In[ ]:
 
-
+try:
+    client.send_email(
+        Destination={
+            'ToAddresses':[email]
+        },
+        Message={
+            'Subject':{
+                'Data': "2nd job is done"
+            },
+            'Body':{
+                'Text': {
+                    'Data': '2nd Job Done'
+                }
+            }
+        },
+        Source=email
+    )
+    
+except Exception as e:
+    print(e)
 
